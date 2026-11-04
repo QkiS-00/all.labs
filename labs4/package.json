@@ -1,0 +1,12 @@
+{
+  "name": "lab4",
+  "version": "1.0.0",
+  "description": "ООП, Лабораторна робота №4. Вдосконалення структури коду графічного редактора об’єктів",
+  "main": "lab4.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "*"
+  }
+}

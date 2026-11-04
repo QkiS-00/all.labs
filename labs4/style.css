@@ -1,0 +1,21 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: white; font-family: sans-serif; }
+body { display: flex; flex-direction: column; }
+#toolbar {
+  flex: none; display: flex; gap: 4px; padding: 4px 6px;
+  background: #eceef1; border-bottom: 1px solid #c4c8cf;
+}
+#toolbar button {
+  position: relative; width: 36px; height: 36px; padding: 0;
+  background: #f7f8fa; border: 1px solid #b9bec7; border-radius: 4px; cursor: pointer;
+}
+#toolbar button:hover { background: #e2e6ee; }
+#toolbar button.active { background: #cfdcf7; border-color: #4a78d6; }
+#toolbar svg { width: 24px; height: 24px; display: block; margin: 0 auto; }
+#toolbar button::after {
+  content: attr(data-tooltip); position: absolute; top: 100%; left: 0; margin-top: 6px;
+  padding: 3px 8px; border-radius: 4px; background: #2b2d33; color: #fff;
+  font-size: 12px; white-space: nowrap; pointer-events: none; z-index: 10;
+  opacity: 0; transition: opacity 0.12s;
+}
+#toolbar button:hover::after { opacity: 1; transition-delay: 0.35s; }
+#canvas { flex: 1 1 0; min-height: 0; width: 100%; display: block; }
